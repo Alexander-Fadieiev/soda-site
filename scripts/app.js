@@ -2939,7 +2939,7 @@ document.addEventListener('DOMContentLoaded', function () {
         position: new google.maps.LatLng(50.4613543, 30.5091258),
         map: map,
         title: 'Soda!',
-        icon: '/images/map.png'
+        icon: '/soda-site/images/map.png'
       });
     }
     // init();
@@ -3254,31 +3254,31 @@ document.addEventListener('DOMContentLoaded', function () {
     if ($('#bubbles-canvas').data('page') == 'blue') {
       var items = [{
         name: 'item1',
-        path: './images/blue2.png'
+        path: '/soda-site/images/blue2.png'
       }];
     } else if ($('#bubbles-canvas').data('page') == 'pink') {
       var items = [{
         name: 'item1',
-        path: 'images/pink2.png'
+        path: '/soda-site/images/pink2.png'
       }];
     } else {
       var items = [{
         name: 'item1',
-        path: '/images/blue2.png'
+        path: '/soda-site/images/blue2.png'
       }, {
         name: 'item2',
-        path: '/images/pink2.png'
+        path: '/soda-site/images/pink2.png'
       }];
     }
     for (var i = 0; i < items.length; i++) {
       loader.add(items[i].name, items[i].path);
     }
     // explosion image
-    loader.add('item3', '/images/explosion-blue.png');
-    loader.add('item4', '/images/explosion-pink.png');
+    loader.add('item3', '/soda-site/images/explosion-blue.png');
+    loader.add('item4', '/soda-site/images/explosion-pink.png');
     //bottle
-    loader.add('bottle', '/images/bottle.png');
-    loader.add('cork', '/images/cork.png');
+    loader.add('bottle', '/soda-site/images/bottle.png');
+    loader.add('cork', '/soda-site/images/cork.png');
 
     //speed and direction
     function init(item) {
@@ -3439,17 +3439,17 @@ document.addEventListener('DOMContentLoaded', function () {
         if (document.querySelector('.js-communications') && document.querySelector('.js-performance')) {
           if ($('.js-communications').offset().top <= window.innerHeight / 2 + window.scrollY) {
             //sprite pink
-            item = new PIXI.Sprite.fromImage('/images/pink2.png');
+            item = new PIXI.Sprite.fromImage('/soda-site/images/pink2.png');
           } else {
             //sprite blue
-            item = new PIXI.Sprite.fromImage('/images/blue2.png');
+            item = new PIXI.Sprite.fromImage('/soda-site/images/blue2.png');
           }
         } else if (document.querySelector('.js-communications')) {
           //sprite pink
-          item = new PIXI.Sprite.fromImage('/images/pink2.png');
+          item = new PIXI.Sprite.fromImage('/soda-site/images/pink2.png');
         } else if (document.querySelector('.js-performance')) {
           //sprite blue
-          item = new PIXI.Sprite.fromImage('/images/blue2.png');
+          item = new PIXI.Sprite.fromImage('/soda-site/images/blue2.png');
         } else {
           // select random image
           let name = items[getRandomInt(0, items.length)].name;
@@ -3606,8 +3606,8 @@ document.addEventListener('DOMContentLoaded', function () {
             //setstyleof text
             var explosion;
             item.alpha = 1;
-            if (imgUrl == '/images/blue2.png') {
-              explosion = PIXI.Texture.fromImage('/images/explosion-blue.png');
+            if (imgUrl == '/soda-site/images/blue2.png') {
+              explosion = PIXI.Texture.fromImage('/soda-site/images/explosion-blue.png');
               var style = new PIXI.TextStyle({
                 fontFamily: 'GothamPro',
                 fontSize: 32,
@@ -3619,7 +3619,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 strokeThickness: 2
               });
             } else {
-              explosion = PIXI.Texture.fromImage('/images/explosion-pink.png');
+              explosion = PIXI.Texture.fromImage('/soda-site/images/explosion-pink.png');
               var style = new PIXI.TextStyle({
                 fontFamily: 'GothamPro',
                 fontSize: 32,
@@ -3732,7 +3732,7 @@ document.addEventListener('DOMContentLoaded', function () {
               let currentScale = item.scale.x;
               let tl = new TimelineMax();
               tl.to(item.scale, 0.7, { x: 0, y: 0, onComplete: function () {
-                  item.texture = PIXI.Texture.fromImage('/images/pink2.png');
+                  item.texture = PIXI.Texture.fromImage('/soda-site/images/pink2.png');
                 } });
               tl.to(item.scale, 0.7, { x: currentScale, y: currentScale });
             });
@@ -3744,7 +3744,7 @@ document.addEventListener('DOMContentLoaded', function () {
               var currentScale = item.scale.x;
               var tl = new TimelineMax();
               tl.to(item.scale, 0.7, { x: 0, y: 0, onComplete: function () {
-                  item.texture = PIXI.Texture.fromImage('/images/blue2.png');
+                  item.texture = PIXI.Texture.fromImage('/soda-site/images/blue2.png');
                 } });
               tl.to(item.scale, 0.7, { x: currentScale, y: currentScale });
             });
